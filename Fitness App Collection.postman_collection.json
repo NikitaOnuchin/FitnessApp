@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "93998112-a090-49d2-b008-696ea6555c0d",
+		"name": "Fitness App Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27790287"
+	},
+	"item": [
+		{
+			"name": "addPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n   \"name\": \"Viktor\",\r\n   \"email\": \"viktor@mail.com\",\r\n   \"age\": 56,\r\n   \"weight\": 120,\r\n   \"height\": 200,\r\n   \"goal\": \"123\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/person"
+			},
+			"response": []
+		},
+		{
+			"name": "addDish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"apple\",\r\n\"calories\": 52,\r\n\"proteins\": 0.3,\r\n\"fats\": 0.2,\r\n\"carbohydrates\": 14\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/dish"
+			},
+			"response": []
+		},
+		{
+			"name": "addMeal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"personId\": 1,\r\n\"dishIds\": [1, 1, 1],\r\n\"mealType\": \"BREAKFAST\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/meal"
+			},
+			"response": []
+		},
+		{
+			"name": "sumForDay",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/report/sumForDay?personId=1&date=26-03-2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"report",
+						"sumForDay"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "26-03-2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isWithinCalorieNorm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/report/isWithinCalorieNorm?personId=1&date=26-03-2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"report",
+						"isWithinCalorieNorm"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "26-03-2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sumForDays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/report/sumForDays?personId=1&dateFrom=24-03-2025&dateTo=26-03-2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"report",
+						"sumForDays"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": "1"
+						},
+						{
+							"key": "dateFrom",
+							"value": "24-03-2025"
+						},
+						{
+							"key": "dateTo",
+							"value": "26-03-2025"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
