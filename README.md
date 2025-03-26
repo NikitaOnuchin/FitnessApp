@@ -106,6 +106,6 @@ URL: http://localhost:8080/report/sumForDays
     ]
     }
 
-# Контакты по вопросам
+# Контакты
 8-912-826-05-42 Никита
 Телеграм - @Onuchin_Nikita
